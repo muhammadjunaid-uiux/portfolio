@@ -1,11 +1,11 @@
-# Muhammad Junaid Ashraf — UI/UX Designer Portfolio (Premium Light v2)
+# Muhammad Junaid Ashraf — UI/UX Designer Portfolio (Premium Dark v2)
 
 A clean, GitHub-ready, zero-build static portfolio website created from
 Muhammad Junaid Ashraf's CV.
 
 ## What is included
 
-- Premium white/light futuristic UI/UX portfolio
+- Premium Black/Dark futuristic UI/UX portfolio
 - Responsive desktop / tablet / mobile design
 - Real CV content
 - Real project links from the CV
