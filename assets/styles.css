@@ -636,3 +636,203 @@ body::before{
   }
   .hero h1{font-size:clamp(44px,13vw,58px);line-height:1.0}
 }
+/* =========================================
+   LIGHT / DARK MODE
+   ========================================= */
+
+body,
+.nav,
+.featured,
+.project-card,
+.about-card,
+.skill-block,
+.education-card,
+.contact-card,
+.button,
+.nav-links,
+.ticker,
+.about-section,
+.skills-section,
+.contact-section {
+  transition:
+    background-color .3s ease,
+    color .3s ease,
+    border-color .3s ease,
+    box-shadow .3s ease;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  width: 42px;
+  height: 42px;
+  margin-left: 6px;
+  border: 1px solid #EAECF0;
+  border-radius: 12px;
+  background: #F9FAFB;
+  color: #344054;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  position: relative;
+  transition: .25s ease;
+}
+
+.theme-toggle:hover {
+  background: #EEF2FF;
+  border-color: #C7D2FE;
+  transform: translateY(-1px);
+}
+
+.theme-icon {
+  position: absolute;
+  font-size: 17px;
+  line-height: 1;
+  transition: opacity .25s ease, transform .25s ease;
+}
+
+.theme-moon {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+}
+
+.theme-sun {
+  opacity: 0;
+  transform: rotate(-90deg) scale(.6);
+}
+
+/* =========================================
+   DARK THEME
+   ========================================= */
+
+html[data-theme="dark"] {
+  --bg: #070B14;
+  --bg2: #0B1020;
+  --card: rgba(16, 24, 40, .85);
+  --card2: rgba(20, 29, 48, .92);
+  --line: rgba(255, 255, 255, .10);
+  --line2: rgba(96, 114, 255, .25);
+  --text: #F8FAFC;
+  --muted: #98A2B3;
+  --muted2: #667085;
+  --cyan: #4BE3FF;
+  --blue: #6072FF;
+  --violet: #9C69FF;
+  --green: #65F1B5;
+  --ink: #F8FAFC;
+  --soft: #0B1020;
+}
+
+html[data-theme="dark"] body {
+  background: #070B14;
+  color: #F8FAFC;
+}
+
+html[data-theme="dark"] body::before {
+  background:
+    linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px);
+}
+
+html[data-theme="dark"] .nav {
+  background: rgba(7,11,20,.82);
+  border-color: rgba(255,255,255,.10);
+  box-shadow: 0 18px 60px rgba(0,0,0,.28);
+}
+
+html[data-theme="dark"] .brand-symbol,
+html[data-theme="dark"] .nav-download,
+html[data-theme="dark"] .button-primary {
+  background: linear-gradient(135deg, #4F46E5, #7C3AED);
+  border-color: transparent;
+  color: #fff;
+}
+
+html[data-theme="dark"] .brand-text strong,
+html[data-theme="dark"] .hero h1,
+html[data-theme="dark"] .section-heading h2,
+html[data-theme="dark"] .about-sticky h2,
+html[data-theme="dark"] .featured h3,
+html[data-theme="dark"] .project-card h4,
+html[data-theme="dark"] .about-card h3,
+html[data-theme="dark"] .timeline-row h3,
+html[data-theme="dark"] .education-card h3,
+html[data-theme="dark"] .contact-card h2,
+html[data-theme="dark"] .hero-proof strong {
+  color: #F8FAFC;
+}
+
+html[data-theme="dark"] .nav-links > a {
+  color: #98A2B3;
+}
+
+html[data-theme="dark"] .nav-links > a:hover {
+  color: #fff;
+  background: rgba(255,255,255,.06);
+}
+
+html[data-theme="dark"] .theme-toggle {
+  background: #111827;
+  border-color: rgba(255,255,255,.12);
+  color: #FACC15;
+}
+
+html[data-theme="dark"] .theme-moon {
+  opacity: 0;
+  transform: rotate(90deg) scale(.6);
+}
+
+html[data-theme="dark"] .theme-sun {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+}
+
+html[data-theme="dark"] .featured,
+html[data-theme="dark"] .project-card,
+html[data-theme="dark"] .about-card,
+html[data-theme="dark"] .skill-block,
+html[data-theme="dark"] .education-card,
+html[data-theme="dark"] .contact-card {
+  background: #0E1626;
+  border-color: rgba(255,255,255,.09);
+  box-shadow: none;
+}
+
+html[data-theme="dark"] .about-section,
+html[data-theme="dark"] .skills-section,
+html[data-theme="dark"] .contact-section {
+  background: #0A101D;
+}
+
+html[data-theme="dark"] .ticker {
+  background: #0B1020;
+  border-color: rgba(255,255,255,.08);
+}
+
+html[data-theme="dark"] .about-body .about-lead {
+  color: #E4E7EC;
+}
+
+html[data-theme="dark"] .skill-cloud span,
+html[data-theme="dark"] .project-actions a,
+html[data-theme="dark"] .muted-action,
+html[data-theme="dark"] .button-glass {
+  background: rgba(255,255,255,.04);
+  border-color: rgba(255,255,255,.10);
+  color: #D0D5DD;
+}
+
+html[data-theme="dark"] .visual {
+  border-color: rgba(255,255,255,.07);
+}
+
+html[data-theme="dark"] .philosophy {
+  background: #111827;
+}
+
+html[data-theme="dark"] .footer {
+  border-color: rgba(255,255,255,.08);
+}
+
+html[data-theme="dark"] .footer-brand strong {
+  color: #F2F4F7;
+}
