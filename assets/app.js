@@ -76,3 +76,37 @@
     });
   }
 })();
+// Light / Dark Theme Toggle
+const themeToggle = document.getElementById("themeToggle");
+const html = document.documentElement;
+
+// Load saved theme or use system preference
+const savedTheme = localStorage.getItem("theme");
+const systemPrefersDark = window.matchMedia(
+  "(prefers-color-scheme: dark)"
+).matches;
+
+const currentTheme = savedTheme || (systemPrefersDark ? "dark" : "light");
+
+html.setAttribute("data-theme", currentTheme);
+
+function updateThemeButton(theme) {
+  const isDark = theme === "dark";
+
+  themeToggle.setAttribute("aria-pressed", isDark);
+  themeToggle.setAttribute(
+    "aria-label",
+    isDark ? "Switch to light mode" : "Switch to dark mode"
+  );
+}
+
+updateThemeButton(currentTheme);
+
+themeToggle.addEventListener("click", () => {
+  const newTheme =
+    html.getAttribute("data-theme") === "dark" ? "light" : "dark";
+
+  html.setAttribute("data-theme", newTheme);
+  localStorage.setItem("theme", newTheme);
+  updateThemeButton(newTheme);
+});
