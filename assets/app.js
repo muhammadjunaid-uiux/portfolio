@@ -75,8 +75,7 @@
       frame.style.transform = 'rotateY(-5deg) rotateX(2deg)';
     });
   }
-})();
-// Light / Dark Theme Toggle
+  // Light / Dark Theme Toggle
 const themeToggle = document.getElementById("themeToggle");
 const html = document.documentElement;
 
@@ -110,3 +109,4 @@ themeToggle.addEventListener("click", () => {
   localStorage.setItem("theme", newTheme);
   updateThemeButton(newTheme);
 });
+})();
